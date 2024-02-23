@@ -11,8 +11,12 @@
 - Pytorch 2.0.1
 - NVIDIA GPU + CUDA
 
-# Content
-- [Heading One](#heading-one)
+# Start
+- [Train](#heading-one)
 - [Heading Two](#heading-two)
 	- [AAA](#aaa)
 	- [bbb](#bbb)
+
+
+## Train
+* At the beginning, you need to set the file paths under different image multiples of (dataset.py/dataset_parsing.py/dataset_parsingnet.py).
