@@ -11,12 +11,9 @@
 - Pytorch 2.0.1
 - NVIDIA GPU + CUDA
 
-# Start
-- [Train](#heading-one)
-- [Heading Two](#heading-two)
-	- [AAA](#aaa)
-	- [bbb](#bbb)
 
-
-# Train
-* At the beginning, you need to set the file paths under different image multiples of (dataset.py/dataset_parsing.py/dataset_parsingnet.py).
+## Train
+* Firstly, you need to download the CelebA dataset and crop the center of the CelebA image to 128*128 size.
+* Secondly, after downsampling the image to 16*16 size, it will be used as ground truth and input image respectively.
+* Finally, set the paths of ground truth and input image in the corresponding positions in (dataset.py/dataset_parsing.py/dataset_parsingnet.py).
+  ### Instructions
