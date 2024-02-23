@@ -68,3 +68,6 @@ parser.add_argument('--load', type=str, default='The training model of the netwo
 If you use this code for your research, please cite our paper.
 > Yongxi Hu, Liang Chen, Zezhao Su, Yaoguo Shen, Na Qi. FACE SUPER-RESOLUTION VIA MULTI-SCALE LOW RESOLUTION PRIOR AND DUAL ATTENTION NETWORKS. IEEE International Conference on Image
 Processing
+
+## Acknowledgments
+Our code is inspired by [FishFSRNet](https://github.com/wcy-cs/FishFSRNet) and [SCET](https://github.com/AlexZou14/SCET).
