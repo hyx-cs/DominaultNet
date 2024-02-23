@@ -22,19 +22,32 @@
   ### Instructions
   * Change this to the path of the CelebA image (option.py)
   ```
-  parser.add_argument('--dir_data', type=str, default='D:\\dataset\\CelebA\\img_align_celeba\\',
+  parser.add_argument('--dir_data', type=str, default='Folder path of CelebA image',
                     help='dataset directory')
   ```
+  * When training the parsing network, modify the following code to the corresponding paths. (dataset_parsingnet.py)
+  ```
+        if args.scale == 4:
+            self.imgs_LR_path = os.path.join(root, 'LR folder path for CelebA images')
+            self.imgs_parsing_path = os.path.join(root, 'The prior image generation from ground truth')
+        elif args.scale == 8:
+            self.imgs_LR_path = os.path.join(root, 'LR folder path for CelebA images')
+            self.imgs_parsing_path = os.path.join(root, 'The prior image generation from ground truth')
+        elif args.scale == 16:
+            self.imgs_LR_path = os.path.join(root, 'LR folder path for CelebA images')
+            self.imgs_parsing_path = os.path.join(root, 'The prior image generation from ground truth')
+  ```
+
   * When training the network, modify the following code to the corresponding paths. (dataset_parsing.py)
   ```
         if self.args.scale == 8:
-            self.imgs_LR_path = os.path.join(root, 'LR_8_bicubic')
+            self.imgs_LR_path = os.path.join(root, 'LR folder path for CelebA images')
         elif self.args.scale == 16:
-            self.imgs_LR_path = os.path.join(root, 'LR_16_bicubic')
+            self.imgs_LR_path = os.path.join(root, 'LR folder path for CelebA images')
         elif self.args.scale == 4:
-            self.imgs_LR_path = os.path.join(root, 'LR_4_bicubic')
+            self.imgs_LR_path = os.path.join(root, 'LR folder path for CelebA images')
                         ···
-        self.imgs_parsing_path = os.path.join(root, 'global_2')
+        self.imgs_parsing_path = os.path.join(root, 'parsing folder path for CelebA images')
   ```
   ```
   Note: There should be corresponding HR/LR/Global/ folders in the three files (train/test/val) for storing the ground truth/input images of different sizes/prior images.
@@ -42,3 +55,16 @@
 
 ## Test
 In the testing phase, pre-trained models provided by the project can be used, as well as models that are additionally trained.
+```
+parser.add_argument('--save_path', type=str, default='./experiment',
+                    help='file path to save model_train')
+parser.add_argument('--parsing_load', type=str, default='The training model of the parsingnet',
+                    help='file name to load')
+parser.add_argument('--load', type=str, default='The training model of the network',
+                    help='file name to load')
+```
+
+## Citation
+If you use this code for your research, please cite our paper.
+> Yongxi Hu, Liang Chen, Zezhao Su, Yaoguo Shen, Na Qi. FACE SUPER-RESOLUTION VIA MULTI-SCALE LOW RESOLUTION PRIOR AND DUAL ATTENTION NETWORKS. IEEE International Conference on Image
+Processing
