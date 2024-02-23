@@ -16,9 +16,9 @@
 * Firstly, you need to download the CelebA dataset and crop the center of the CelebA image to 128*128 size.
 * Secondly, after downsampling the image to 16*16 size, it will be used as ground truth and input image respectively.
 * Finally, set the paths of ground truth and input image in the corresponding positions.
-```
-  Note: Here the processed images of CelebA are divided into three folders named train/test/val as training set/test set/validation set respectively.
-```
+
+:star: Note: Here the processed images of CelebA are divided into three folders named train/test/val as training set/test set/validation set respectively.
+
   ### Instructions
   * Change this to the path of the CelebA image (option.py)
   ```
@@ -49,9 +49,7 @@
                         ···
         self.imgs_parsing_path = os.path.join(root, 'parsing folder path for CelebA images')
   ```
-  ```
-  Note: There should be corresponding HR/LR/Global/ folders in the three files (train/test/val) for storing the ground truth/input images of different sizes/prior images.
-  ```
+:star: Note: There should be corresponding HR/LR/Global/ folders in the three files (train/test/val) for storing the ground truth/input images of different sizes/prior images.
 
 ## Test
 In the testing phase, pre-trained models provided by the project can be used, as well as models that are additionally trained.
