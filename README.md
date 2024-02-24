@@ -13,19 +13,21 @@
 
 
 ## Train
-* Firstly, you need to download the CelebA dataset and crop the center of the CelebA image to 128*128 size.
-* Secondly, after downsampling the image to 16*16 size, it will be used as ground truth and input image respectively.
-* Finally, set the paths of ground truth and input image in the corresponding positions.
+:new_moon: Firstly, you need to download the CelebA dataset and crop the center of the CelebA image to 128*128 size.
+
+:waxing_crescent_moon: Secondly, after downsampling the image to 16*16 size, it will be used as ground truth and input image respectively.
+
+:first_quarter_moon: Finally, set the paths of ground truth and input image in the corresponding positions.
 
 :heavy_exclamation_mark: Note: Here the processed images of CelebA are divided into three folders named train/test/val as training set/test set/validation set respectively.
 
   ### Instructions
-  * Change this to the path of the CelebA image (option.py)
+  :last_quarter_moon: Change this to the path of the CelebA image (option.py)
   ```
   parser.add_argument('--dir_data', type=str, default='Folder path of CelebA image',
                     help='dataset directory')
   ```
-  * When training the parsing network, modify the following code to the corresponding paths. (dataset_parsingnet.py)
+  :waning_gibbous_moon: When training the parsing network, modify the following code to the corresponding paths. (dataset_parsingnet.py)
   ```
         if args.scale == 4:
             self.imgs_LR_path = os.path.join(root, 'LR folder path for CelebA images')
@@ -38,7 +40,7 @@
             self.imgs_parsing_path = os.path.join(root, 'The prior image generation from ground truth')
   ```
 
-  * When training the network, modify the following code to the corresponding paths. (dataset_parsing.py)
+  :full_moon: When training the network, modify the following code to the corresponding paths. (dataset_parsing.py)
   ```
         if self.args.scale == 8:
             self.imgs_LR_path = os.path.join(root, 'LR folder path for CelebA images')
