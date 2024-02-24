@@ -22,12 +22,12 @@
 :heavy_exclamation_mark: Note: Here the processed images of CelebA are divided into three folders named train/test/val as training set/test set/validation set respectively.
 
   ### Instructions
-  :last_quarter_moon: Change this to the path of the CelebA image (option.py)
+  :last_quarter_moon: Change this to the path of the CelebA image ```option.py```
   ```
   parser.add_argument('--dir_data', type=str, default='Folder path of CelebA image',
                     help='dataset directory')
   ```
-  :waning_gibbous_moon: When training the parsing network, modify the following code to the corresponding paths. (dataset_parsingnet.py)
+  :waning_gibbous_moon: When training the parsing network, modify the following code to the corresponding paths. ```dataset_parsingnet.py```
   ```
         if args.scale == 4:
             self.imgs_LR_path = os.path.join(root, 'LR folder path for CelebA images')
@@ -40,7 +40,7 @@
             self.imgs_parsing_path = os.path.join(root, 'The prior image generation from ground truth')
   ```
 
-  :full_moon: When training the network, modify the following code to the corresponding paths. (dataset_parsing.py)
+  :full_moon: When training the network, modify the following code to the corresponding paths. ```dataset_parsing.py```
   ```
         if self.args.scale == 8:
             self.imgs_LR_path = os.path.join(root, 'LR folder path for CelebA images')
